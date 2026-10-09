@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#091a37" />
+  <meta name="description" content="MASTER FRENCH — daily TCF Canada study schedule for full-time working days." />
+  <title>Working Full Time | MASTER FRENCH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --navy: #091a37;
+      --midnight: #07152e;
+      --navy-soft: #122b51;
+      --panel: #122a4a;
+      --line: rgba(227,237,255,.12);
+      --white: #f8fbff;
+      --muted: #a8bbd7;
+      --blue: #4b82fa;
+      --red: #f15a69;
+      --mint: #6fe0b2;
+      --font: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { min-height: 100%; scroll-behavior: smooth; }
+    body { margin: 0; min-height: 100vh; background: var(--midnight); color: var(--white); font-family: var(--font); -webkit-font-smoothing: antialiased; }
+    button, a, textarea { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; }
+    button:focus-visible, a:focus-visible, textarea:focus-visible, input:focus-visible { outline: 3px solid #86aaff; outline-offset: 3px; }
+    .screen { min-height: 100vh; padding: 0 24px 64px; isolation: isolate; position: relative; overflow: hidden; background: radial-gradient(ellipse 620px 460px at 2% 4%, rgba(54,111,236,.16), transparent 72%), radial-gradient(ellipse 460px 460px at 98% 53%, rgba(223,58,92,.095), transparent 75%), linear-gradient(128deg, #091a36, #06142c 76%); }
+    .screen::before { content: ""; position: absolute; z-index:-1; top:-530px; right:-300px; width:950px; height:950px; border:1px solid rgba(255,255,255,.07); border-radius:50%; box-shadow:0 0 0 140px rgba(255,255,255,.012),0 0 0 290px rgba(255,255,255,.008); pointer-events:none; }
+    .tricolor { position:absolute; inset:0 0 auto; height:4px; background:linear-gradient(90deg, #457cf4 0 33.333%, #f5f6fb 33.333% 66.666%, #ed5265 66.666%); }
+    .wrap { max-width:1160px; margin:0 auto; }
+    .topbar { min-height:101px; display:flex; align-items:center; gap:22px; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .brand { display:inline-flex; align-items:center; gap:12px; text-decoration:none; font-size:14px; font-weight:800; letter-spacing:.14em; white-space:nowrap; }
+    .brand-symbol { display:flex; align-items:center; justify-content:center; width:35px; height:37px; border:1px solid rgba(255,255,255,.2); border-radius:12px; background:rgba(255,255,255,.05); font:italic 20px 'Playfair Display', Georgia, serif; color:white; }
+    .brand-symbol::first-letter { color:#fff; }
+    .top-actions { display:flex; gap:12px; align-items:center; }
+    .nav-mode { display:flex; align-items:center; gap:8px; font-size:12px; color:#c8d7ee; letter-spacing:.035em; }
+    .nav-mode .dot { width:7px; height:7px; background:var(--red); border-radius:50%; box-shadow:0 0 0 4px rgba(241,90,105,.1); }
+    .outline-btn { display:inline-flex; align-items:center; gap:9px; color:#f3f7ff; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.045); text-decoration:none; border-radius:12px; padding:12px 16px; font-weight:700; font-size:12px; transition:background .2s,border-color .2s,transform .2s; }
+    .outline-btn:hover { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.35); transform:translateY(-2px); }
+    .outline-btn svg { width:17px; height:17px; }
+    .hero { display:flex; justify-content:space-between; align-items:center; gap:35px; padding:65px 0 50px; }
+    .eyebrow { display:flex; gap:11px; align-items:center; font-weight:800; font-size:11px; color:#9db9f5; letter-spacing:.22em; text-transform:uppercase; margin-bottom:20px; }
+    .eyebrow::before { content:""; width:28px; height:2px; background:var(--red); border-radius:3px; }
+    h1 { margin:0; font-size:clamp(40px,5.1vw,74px); line-height:1.08; letter-spacing:-.058em; font-weight:800; }
+    h1 em { font-weight:500; color:#d6e1f7; font-family:'Playfair Display', Georgia, serif; }
+    .intro { max-width:620px; font-size:16px; color:var(--muted); line-height:1.75; margin:20px 0 0; }
+    .date-strip { display:inline-flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:26px; font-size:13px; font-weight:650; color:#d9e6fb; }
+    .date-pill { display:inline-flex; align-items:center; gap:9px; border:1px solid rgba(255,255,255,.15); border-radius:30px; padding:9px 13px; background:rgba(255,255,255,.04); }
+    .date-pill svg { width:16px; height:16px; color:#84a9fc; }
+    .day-badge { color:#ffaeb9; border-left:1px solid rgba(255,255,255,.25); padding-left:13px; text-transform:uppercase; letter-spacing:.12em; font-size:10px; font-weight:800; }
+    .progress-orbit { width:188px; height:188px; flex:none; position:relative; display:grid; place-items:center; }
+    .progress-orbit::before { content:""; position:absolute; inset:-18px; border:1px solid rgba(255,255,255,.065); border-radius:50%; }
+    .progress-orbit svg { width:100%; height:100%; overflow:visible; transform:rotate(-90deg); }
+    .track { fill:none; stroke:rgba(255,255,255,.085); stroke-width:8; }
+    .meter { fill:none; stroke:url(#progressGradient); stroke-width:8; stroke-linecap:round; stroke-dasharray:515.22; stroke-dashoffset:515.22; transition:stroke-dashoffset 900ms cubic-bezier(.22,1,.3,1); filter:drop-shadow(0 0 5px rgba(87,130,243,.33)); }
+    .orbit-text { text-align:center; position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    .orbit-number { font-size:45px; line-height:1.06; letter-spacing:-.06em; font-weight:800; }
+    .orbit-number small { font-size:18px; color:#7c9acb; font-weight:600; }
+    .orbit-label { margin-top:7px; text-transform:uppercase; letter-spacing:.16em; color:#adc1dd; font-size:9px; font-weight:800; }
+    .content-grid { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:27px; align-items:start; }
+    .section-heading { display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin:0 0 19px; }
+    .section-heading h2 { margin:0; font-size:20px; letter-spacing:-.025em; }
+    .section-heading p { margin:5px 0 0; color:#90a7c9; font-size:12px; }
+    .count { font-size:12px; font-weight:800; color:#ccdafa; }
+    .tasks { display:grid; gap:13px; }
+    .task { display:grid; grid-template-columns:55px minmax(0,1fr) auto; align-items:center; gap:16px; padding:20px; border:1px solid var(--line); border-radius:19px; background:linear-gradient(110deg,rgba(24,51,88,.8),rgba(15,35,65,.83)); position:relative; transition:transform .28s,background .3s,border-color .3s,box-shadow .3s; overflow:hidden; }
+    .task:hover { transform:translateY(-2px); border-color:rgba(117,152,210,.33); box-shadow:0 12px 32px rgba(0,0,0,.14); }
+    .task::after { content:""; height:100%; width:3px; background:var(--accent, var(--blue)); position:absolute; left:0; top:0; opacity:.93; }
+    .task.is-done { border-color:rgba(111,224,178,.25); background:linear-gradient(110deg,rgba(18,65,69,.5),rgba(15,35,65,.82)); }
+    .task.is-done::after { background:var(--mint); }
+    .task.is-celebrating { animation:completedPulse .86s ease both; }
+    @keyframes completedPulse { 0%,100% { box-shadow:0 0 0 0 transparent; } 32% { box-shadow:0 0 0 4px rgba(111,224,178,.3),0 0 35px rgba(111,224,178,.12); transform:scale(1.012); } }
+    .task-icon { width:55px; height:55px; display:grid; place-items:center; border-radius:16px; background:var(--icon-bg,rgba(72,121,240,.1)); color:var(--accent,var(--blue)); position:relative; }
+    .task-icon svg { width:25px; height:25px; stroke-width:1.8; }
+    .task.is-done .task-icon { background:rgba(111,224,178,.13); color:var(--mint); }
+    .task-index { color:#7895bf; text-transform:uppercase; font-size:9px; font-weight:800; letter-spacing:.15em; margin-bottom:5px; }
+    .task-name { margin:0; font-size:18px; letter-spacing:-.02em; font-weight:750; }
+    .task-name a { color:inherit; text-decoration:none; border-bottom:1px dashed rgba(160,213,176,.7); transition:color .2s; }
+    .task-name a:hover { color:#a7efc5; }
+    .task-details { margin:7px 0 0; color:#afc0d9; font-size:12px; line-height:1.6; }
+    .task-info { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+    .time-chip { border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:5px 9px; font-size:10px; font-weight:800; color:#c4d5f2; }
+    .resource-link { text-decoration:none; color:#8db5ff; font-size:11px; font-weight:800; padding:6px 4px; transition:color .2s; }
+    .resource-link:hover { text-decoration:underline; color:white; }
+    .action-btn { flex:none; border:1px solid rgba(255,255,255,.18); background:#f5f8ff; color:#102244; font-size:12px; font-weight:800; border-radius:12px; padding:12px 17px; white-space:nowrap; transition:transform .2s,box-shadow .2s,background .2s; }
+    .action-btn:hover { transform:translateY(-2px); box-shadow:0 6px 22px rgba(229,239,255,.17); }
+    .action-btn:active { transform:scale(.96); }
+    .task.is-done .action-btn { color:#9df1c9; background:rgba(111,224,178,.08); border-color:rgba(111,224,178,.28); }
+    .completed-check { display:inline-block; margin-right:5px; }
+    .spark { position:absolute; pointer-events:none; border-radius:50%; width:7px; height:7px; background:var(--mint); opacity:0; z-index:2; left:calc(100% - 72px); top:50%; animation:sparkFly .8s cubic-bezier(.2,.7,.1,1) forwards; }
+    @keyframes sparkFly { 0%{opacity:1;transform:translate(0,0) scale(.5)} 80%{opacity:.9}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.1)} }
+    .right-rail { display:grid; gap:16px; }
+    .rail-panel { border:1px solid var(--line); padding:26px 24px; border-radius:20px; background:rgba(17,39,71,.72); }
+    .panel-kicker { color:#84a9fc; font-size:10px; letter-spacing:.17em; font-weight:800; text-transform:uppercase; }
+    .rail-panel h3 { font-size:22px; letter-spacing:-.035em; line-height:1.3; margin:11px 0 9px; }
+    .rail-panel p { color:var(--muted); font-size:13px; line-height:1.7; margin:0; }
+    .rail-progress { margin:24px 0 9px; display:flex; align-items:baseline; justify-content:space-between; font-size:12px; font-weight:800; color:#c2d4f1; }
+    .rail-progress strong { font-size:20px; color:#fff; }
+    .bar { height:7px; background:rgba(255,255,255,.1); border-radius:30px; overflow:hidden; }
+    .bar > div { height:100%; width:0%; background:linear-gradient(90deg,#4779f6, #f66e7c); border-radius:30px; transition:width .85s cubic-bezier(.22,1,.3,1); }
+    .fine-note { padding:12px 14px; margin-top:20px; color:#a6bad5; font-size:11px; line-height:1.6; background:rgba(255,255,255,.045); border-radius:12px; }
+    .info-panel { background:linear-gradient(140deg, rgba(45,77,134,.41),rgba(22,43,76,.65)); }
+    .info-panel .rule { display:flex; align-items:center; gap:12px; margin:20px 0 0; color:#c4d3e9; font-size:12px; }
+    .rule svg { color:#8eaaff; width:18px; height:18px; flex:none; }
+    .footer-note { margin-top:25px; color:#6f89b1; font-size:11px; text-align:center; }
+    .victory { position:relative; margin-bottom:25px; padding:26px; border-radius:20px; border:1px solid rgba(111,224,178,.36); background:radial-gradient(circle at 100% 0%,rgba(111,224,178,.11),transparent 45%),linear-gradient(105deg,rgba(16,69,76,.87),rgba(18,40,72,.95)); display:none; align-items:center; justify-content:space-between; gap:25px; overflow:hidden; }
+    .victory.show { display:flex; animation:victoryReveal .58s cubic-bezier(.17,.88,.3,1.15) both; }
+    @keyframes victoryReveal { from { opacity:0;transform:translateY(22px) scale(.98);} to {opacity:1;transform:translateY(0) scale(1);} }
+    .victory-medal { width:44px; height:44px; background:rgba(111,224,178,.14); border-radius:15px; display:grid; place-items:center; color:#8bf6c2; font-size:24px; margin-bottom:14px; }
+    .victory h2 { margin:0 0 7px; font-size:24px; letter-spacing:-.04em; }
+    .victory p { margin:0; font-size:13px; color:#b3d6d3; line-height:1.6; }
+    .download-btn { border:0; flex:none; background:#f6f9ff; color:#102244; padding:15px 19px; display:flex; align-items:center; gap:11px; border-radius:12px; font-weight:800; font-size:12px; box-shadow:0 10px 30px rgba(0,0,0,.12); transition:transform .2s; }
+    .download-btn:hover { transform:translateY(-3px); }
+    .download-btn svg { width:17px; height:17px; }
+    .overlay { position:fixed; z-index:20; inset:0; background:rgba(4,13,30,.74); backdrop-filter:blur(9px); -webkit-backdrop-filter:blur(9px); display:none; overflow:auto; padding:30px 16px; align-items:center; justify-content:center; }
+    .overlay.visible { display:flex; animation:fadeBackdrop .23s both; }
+    @keyframes fadeBackdrop { from { opacity:0; } to {opacity:1;} }
+    .modal { position:relative; width:min(100%,580px); background:#112849; border:1px solid rgba(224,236,255,.22); box-shadow:0 35px 120px rgba(0,0,0,.45); border-radius:24px; padding:32px; animation:modalPop .32s cubic-bezier(.2,.9,.22,1.05) both; margin:auto; }
+    @keyframes modalPop { from{ opacity:0;transform:translateY(20px) scale(.96);} to{opacity:1;transform:translateY(0) scale(1);} }
+    .modal-header { display:flex; justify-content:space-between; gap:15px; align-items:flex-start; }
+    .modal h2 { margin:7px 0 7px; letter-spacing:-.04em; font-size:28px; }
+    .modal-subtitle { margin:0; color:#a5bad7; font-size:12px; line-height:1.6; }
+    .close-btn { border:1px solid rgba(255,255,255,.13); width:35px; height:35px; border-radius:11px; background:rgba(255,255,255,.05); color:#d7e5fb; font-size:22px; line-height:1; }
+    .field-heading { display:flex; justify-content:space-between; align-items:center; gap:10px; margin:27px 0 11px; font-size:12px; color:#edf4ff; font-weight:800; }
+    .required { color:#f68e9c; font-size:10px; font-weight:700; }
+    .score-options { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px; }
+    .score-options label { position:relative; min-width:0; }
+    .score-options input { position:absolute; opacity:0; width:100%; height:100%; margin:0; cursor:pointer; }
+    .score-options span { display:flex; justify-content:center; align-items:center; border:1px solid rgba(255,255,255,.16); border-radius:10px; height:46px; color:#cad7eb; font-size:13px; font-weight:800; background:rgba(255,255,255,.04); transition:background .2s,border-color .2s,transform .2s; }
+    .score-options input:checked + span { border-color:#80a9ff; background:#477bee; color:#fff; box-shadow:0 6px 18px rgba(63,111,234,.22); transform:translateY(-2px); }
+    .score-options input:focus-visible + span { outline:3px solid #a9bfff; outline-offset:2px; }
+    .notes-form { display:grid; gap:13px; }
+    .note-label { color:#d5e1f3; font-size:11px; font-weight:700; display:block; margin-bottom:8px; }
+    textarea { resize:vertical; display:block; width:100%; min-height:68px; padding:13px 14px; border:1px solid rgba(255,255,255,.16); border-radius:11px; outline:none; background:rgba(5,21,46,.54); color:white; line-height:1.5; font-size:12px; transition:border-color .2s,background .2s; }
+    textarea::placeholder { color:#788eaf; }
+    textarea:focus { border-color:#7fa8ff; background:rgba(6,22,48,.85); }
+    .modal-footer { display:flex; gap:11px; justify-content:flex-end; align-items:center; margin-top:27px; }
+    .ghost-btn { border:1px solid rgba(255,255,255,.19); background:transparent; color:#d2dff2; padding:13px 17px; border-radius:12px; font-weight:800; font-size:12px; }
+    .primary-btn { border:0; background:linear-gradient(110deg,#487bf2,#628cf4); color:white; padding:14px 20px; border-radius:12px; font-weight:800; font-size:12px; box-shadow:0 8px 22px rgba(61,106,218,.25); transition:transform .2s; }
+    .primary-btn:hover {transform:translateY(-2px)}
+    .drawer-overlay { position:fixed; inset:0; z-index:30; background:rgba(2,9,24,.7); display:none; }
+    .drawer-overlay.visible { display:block; animation:fadeBackdrop .2s both; }
+    .drawer { position:absolute; top:0; right:0; bottom:0; width:min(100%,520px); overflow-y:auto; padding:32px; border-left:1px solid rgba(255,255,255,.15); background:#0e2342; box-shadow:-30px 0 70px rgba(0,0,0,.35); animation:slideDrawer .33s cubic-bezier(.22,1,.36,1) both; }
+    @keyframes slideDrawer { from{ transform:translateX(35px);opacity:.4;} to{transform:translateX(0);opacity:1;} }
+    .drawer-head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:26px; }
+    .drawer h2 { font-size:30px; letter-spacing:-.04em; margin:6px 0 7px; }
+    .drawer-date { color:#a8bcdb; font-size:13px; margin:0; }
+    .overview-list { display:grid; gap:12px; }
+    .overview-entry { border:1px solid rgba(255,255,255,.13); border-radius:16px; padding:18px; background:rgba(255,255,255,.045); }
+    .entry-head { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .entry-title { font-size:15px; font-weight:800; }
+    .entry-sub { font-size:11px; color:#9db1d0; margin-top:6px; }
+    .entry-score { flex:none; display:inline-flex; gap:8px; align-items:center; }
+    .score-tag { color:#b7ffd8; border:1px solid rgba(111,224,178,.3); background:rgba(111,224,178,.07); font-size:11px; font-weight:800; padding:7px 9px; border-radius:8px; }
+    .pending-tag { color:#aabbd5; font-size:11px; }
+    .edit-btn { background:transparent; border:0; color:#a7c4ff; font-size:11px; font-weight:800; padding:8px 2px; }
+    .entry-notes { margin:13px 0 0; padding:11px 13px; border-radius:10px; background:rgba(0,0,0,.14); color:#bdcee3; font-size:12px; line-height:1.7; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .entry-notes div + div { margin-top:6px; }
+    .overview-foot { color:#90a7c7; font-size:11px; margin-top:20px; line-height:1.6; }
+    .toast { position:fixed; z-index:50; bottom:30px; left:50%; transform:translate(-50%,18px); padding:12px 18px; background:#edf6ff; color:#142443; border-radius:12px; box-shadow:0 12px 40px rgba(0,0,0,.3); opacity:0; pointer-events:none; transition:opacity .25s,transform .25s; font-size:12px; font-weight:800; text-align:center; max-width:calc(100vw - 32px); }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+    body.dialog-open { overflow:hidden; }
+    .icon { display:inline-block; vertical-align:middle; }
+    .muted { color:var(--muted); }
+    @media(max-width:1000px) { .content-grid { grid-template-columns:minmax(0,1fr) 270px; } .hero {padding:53px 0 43px;} .progress-orbit { width:155px;height:155px; } .orbit-number{font-size:36px;} .task{grid-template-columns:48px minmax(0,1fr);gap:13px}.task-icon{width:48px;height:48px}.task .action-btn{grid-column:2;justify-self:start;margin-top:2px;} }
+    @media(max-width:730px) { .screen { padding:0 16px 45px; } .topbar { min-height:80px; } .brand { font-size:12px; } .nav-mode { display:none; } .hero { gap:20px; padding:42px 0; } .hero h1 {font-size:42px} .hero .intro {font-size:14px}.progress-orbit {width:125px;height:125px}.orbit-number{font-size:31px}.orbit-label{font-size:8px}.content-grid{grid-template-columns:1fr}.right-rail{grid-template-columns:1fr 1fr}.rail-panel{padding:23px}.victory{flex-direction:column;align-items:flex-start}.modal{padding:24px}.drawer{padding:25px} }
+    @media(max-width:530px) { .brand {letter-spacing:.05em}.outline-btn{padding:11px 12px}.outline-btn .label-text{display:none}.hero{display:block}.progress-orbit{margin:32px 0 0;width:145px;height:145px}.content-grid {gap:24px}.right-rail{grid-template-columns:1fr}.task{padding:17px;grid-template-columns:45px minmax(0,1fr);}.task-name{font-size:16px}.task-icon{width:45px;height:45px}.section-heading h2{font-size:19px}.modal-footer{display:grid;grid-template-columns:1fr 1fr}.modal-footer button{padding:13px 9px}.score-options{gap:5px}.score-options span{font-size:12px;height:41px}.modal h2{font-size:24px}.date-strip{gap:8px} }
+    @media(prefers-reduced-motion:reduce) {*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;} }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <div class="tricolor" aria-hidden="true"></div>
+    <div class="wrap">
+      <header class="topbar">
+        <a href="../index.html" class="brand" aria-label="Back to Master French homepage"><span class="brand-symbol" aria-hidden="true">F</span> MASTER FRENCH</a>
+        <div class="top-actions">
+          <span class="nav-mode"><span class="dot"></span> WORKING FULL TIME</span>
+          <button class="outline-btn" id="overviewButton" type="button" aria-label="Open today's overview">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span class="label-text">Overview</span>
+            <span id="overviewFraction">0/5</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="hero" aria-labelledby="heroTitle">
+        <div>
+          <div class="eyebrow">LE SECRET, C’EST L’ACTION</div>
+          <h1 id="heroTitle">Five hours.<br/><em>One mission.</em></h1>
+          <p class="intro" id="heroDescription">Your focused TCF Canada study plan, designed for a full working day. Five deliberate hours to move forward.</p>
+          <div class="date-strip">
+            <span class="date-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+              <span id="todayDate">Today</span>
+            </span>
+            <span id="dayKind" class="day-badge">WEEKDAY PLAN</span>
+          </div>
+        </div>
+        <div class="progress-orbit" aria-label="Today's progress" role="img" id="progressRingLabel">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="progressGradient"><stop offset="0%" stop-color="#4b82fa"/><stop offset="100%" stop-color="#73e5b7"/></linearGradient></defs><circle class="track" cx="100" cy="100" r="82"/><circle class="meter" id="ringMeter" cx="100" cy="100" r="82"/></svg>
+          <div class="orbit-text"><span class="orbit-number"><span id="heroDone">0</span><small>/5</small></span><span class="orbit-label">HOURS COMPLETE</span></div>
+        </div>
+      </section>
+
+      <section id="victoryBanner" class="victory" aria-live="polite">
+        <div>
+          <div class="victory-medal" aria-hidden="true">★</div>
+          <h2>Magnifique. Mission accomplie!</h2>
+          <p>All five study blocks are complete. Your ScoreCard is ready to take with you.</p>
+        </div>
+        <button id="downloadScorecard" type="button" class="download-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg>
+          Download ScoreCard
+        </button>
+      </section>
+
+      <main class="content-grid">
+        <section aria-labelledby="sessionsHeading">
+          <div class="section-heading">
+            <div><h2 id="sessionsHeading">Today's study sessions</h2><p id="scheduleHint">Five one-hour blocks · Complete in any order</p></div>
+            <span class="count" id="taskCount">0 OF 5 DONE</span>
+          </div>
+          <div class="tasks" id="taskList"></div>
+          <div class="footer-note">L'action est la clé du progrès. — Progress is built, one session at a time.</div>
+        </section>
+        <aside class="right-rail" aria-label="Study progress and details">
+          <section class="rail-panel">
+            <span class="panel-kicker">YOUR DAILY TARGET</span>
+            <h3>Progress you can feel.</h3>
+            <p>Finish each session, choose a CEFR score, and save three things you learned.</p>
+            <div class="rail-progress"><span>Daily completion</span><span><strong id="progressPercent">0%</strong></span></div>
+            <div class="bar" aria-hidden="true"><div id="progressBar"></div></div>
+            <div class="fine-note" id="persistenceNote">Saved automatically on this device. Only today's entries are retained; yesterday's data is cleared when the site is opened on a new date.</div>
+          </section>
+          <section class="rail-panel info-panel">
+            <span class="panel-kicker">A GENTLE REMINDER</span>
+            <h3>Consistency over perfection.</h3>
+            <p>Your score is a self-assessment, not an official TCF result. Record what truly improved today.</p>
+            <div class="rule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 8v4l3 2M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z"/></svg> 5 focused hours, on a working day</div>
+            <div class="rule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 3h9a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 6h7M9 13h7M9 17h4M3 7v12"/></svg> Edit any saved entry in Overview</div>
+          </section>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <div class="overlay" id="taskOverlay" role="presentation">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+      <div class="modal-header">
+        <div><span class="panel-kicker" id="modalKicker">SESSION REFLECTION</span><h2 id="modalTitle">Capture your progress</h2><p class="modal-subtitle" id="modalDesc">Choose your score and record three specific things you learned.</p></div>
+        <button type="button" class="close-btn" id="modalClose" aria-label="Close">×</button>
+      </div>
+      <form id="reflectionForm">
+        <div class="field-heading"><span>How would you score this session?</span><span class="required">REQUIRED</span></div>
+        <div class="score-options" role="radiogroup" aria-label="CEFR score">
+          <label><input type="radio" name="score" value="A1" required/><span>A1</span></label>
+          <label><input type="radio" name="score" value="A2"/><span>A2</span></label>
+          <label><input type="radio" name="score" value="B1"/><span>B1</span></label>
+          <label><input type="radio" name="score" value="B2"/><span>B2</span></label>
+          <label><input type="radio" name="score" value="C1"/><span>C1</span></label>
+          <label><input type="radio" name="score" value="C2"/><span>C2</span></label>
+        </div>
+        <div class="field-heading"><span>What three things did you learn?</span><span class="required">ALL 3 REQUIRED</span></div>
+        <div class="notes-form">
+          <div><label for="lesson1" class="note-label">01 / First takeaway</label><textarea id="lesson1" name="lesson1" required maxlength="2000" placeholder="A new phrase, pronunciation insight, exam technique…"></textarea></div>
+          <div><label for="lesson2" class="note-label">02 / Second takeaway</label><textarea id="lesson2" name="lesson2" required maxlength="2000" placeholder="Something you finally understood…"></textarea></div>
+          <div><label for="lesson3" class="note-label">03 / Third takeaway</label><textarea id="lesson3" name="lesson3" required maxlength="2000" placeholder="A mistake corrected or skill improved…"></textarea></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="ghost-btn" id="cancelReflection">Cancel</button>
+          <button type="submit" class="primary-btn" id="saveReflection">Finish &amp; save ✓</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="drawer-overlay" id="overviewOverlay" role="presentation">
+    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="overviewTitle">
+      <div class="drawer-head"><div><span class="panel-kicker">YOUR DAILY LOG</span><h2 id="overviewTitle">Session overview</h2><p class="drawer-date" id="drawerDate"></p></div><button class="close-btn" id="overviewClose" aria-label="Close overview">×</button></div>
+      <div class="overview-list" id="overviewList"></div>
+      <p class="overview-foot">Saved only in this browser. Your daily log is cleared on the next calendar day. Download your ScoreCard after finishing all five sessions.</p>
+    </aside>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      'use strict';
+      const STORAGE_KEY = 'masterFrench:daily:v1';
+      const OFFICIAL_EXAMPLES = 'https://www.france-education-international.fr/test/exemples-epreuves-tcf';
+      const AAP_PATH = '../aap/index.html';
+      const SCORE_VALUES = new Set(['A1','A2','B1','B2','C1','C2']);
+      const icons = {
+        speaking: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5m-4 0h8"/></svg>',
+        writing: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5 4 4M3 21l4.4-.8L20.5 7.1a2.1 2.1 0 0 0-3-3L4.4 17.2 3 21ZM4 6h7M4 10h4"/></svg>',
+        listening: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-4a9 9 0 0 1 18 0v4M3 13h4v8H5a2 2 0 0 1-2-2v-6Zm18 0h-4v8h2a2 2 0 0 0 2-2v-6Z"/></svg>',
+        reading: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6a9 9 0 0 0-9-2v15a9 9 0 0 1 9 2 9 9 0 0 1 9-2V4a9 9 0 0 0-9 2Zm0 0v15"/></svg>',
+        aap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-1 8 10-13h-7l0-7Z"/></svg>'
+      };
+      const style = {
+        speaking: ['#9fb0ff','rgba(142,153,255,.12)'],
+        writing: ['#f0a0b5','rgba(241,93,127,.12)'],
+        listening: ['#81d4e4','rgba(72,188,215,.12)'],
+        reading: ['#e6c887','rgba(226,181,83,.12)'],
+        aap: ['#a9e3b6','rgba(105,204,145,.12)']
+      };
+      const $ = id => document.getElementById(id);
+      const taskList = $('taskList');
+      let state = null;
+      let activeTaskId = null;
+      let isEditing = false;
+      let modalLastFocus = null;
+      let overviewLastFocus = null;
+      let toastTimer;
+      let storageAvailable = true;
+
+      function localDate(date = new Date()) {
+        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+      }
+      function isWeekend(date = new Date()) { return [0, 6].includes(date.getDay()); }
+      function dayType() { return isWeekend() ? 'weekend' : 'weekday'; }
+      function getTasks() {
+        const weekend = isWeekend();
+        return [
+          { id:'speaking', name:'Speaking', category:'Speaking', sub:weekend ? 'AAP Speaking Module · 2 attempts' : 'Class with Preply', link:weekend ? AAP_PATH : null, linkText:weekend ? 'Open AAP ↗' : null, minutes:60 },
+          { id:'writing', name:'Writing', category:'Writing', sub:weekend ? 'Exam Drill · NOTE 1' : 'Class with FwH · Focus on one task (your choice)', minutes:60 },
+          { id:'listening', name:'Listening', category:'Listening', sub:'Practice with official TCF examples', link:OFFICIAL_EXAMPLES, linkText:'Official practice ↗', minutes:60 },
+          { id:'reading', name:'Reading', category:'Reading', sub:'Practice with official TCF examples', link:OFFICIAL_EXAMPLES, linkText:'Official practice ↗', minutes:60 },
+          { id:'aap', name:'Active Absorption Program', category:'AAP', sub:'Your dedicated AAP practice session', link:AAP_PATH, linkText:'Open AAP ↗', minutes:60 }
+        ];
+      }
+      function newState() { return { schemaVersion:1, date:localDate(), mode:'working_full_time', dayType:dayType(), updatedAt:new Date().toISOString(), tasks:{} }; }
+      function persist() {
+        state.updatedAt = new Date().toISOString();
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); storageAvailable = true; }
+        catch (e) { storageAvailable = false; $('persistenceNote').textContent = 'Browser storage is unavailable. Your entries may not survive a refresh. Allow site storage to retain progress.'; toast('Storage unavailable — entries may not persist.'); }
+      }
+      function load() {
+        let saved = null;
+        try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); }
+        catch (e) { storageAvailable = false; }
+        // An old day (or switching schedule modes) starts a fresh single-day log.
+        if (saved && saved.date === localDate() && saved.mode === 'working_full_time' && saved.dayType === dayType() && saved.tasks && typeof saved.tasks === 'object' && !Array.isArray(saved.tasks)) {
+          state = saved;
+        } else {
+          state = newState();
+          persist();
+        }
+      }
+      function rollover() {
+        if (state.date !== localDate() || state.dayType !== dayType()) {
+          state = newState(); persist(); closeModal(); closeOverview(); render(); toast('A new day, a fresh start. Bonne chance!');
+        }
+      }
+      function completedCount() { return getTasks().filter(task => isCompleted(task.id)).length; }
+      function isCompleted(id) { const entry = state.tasks[id]; return Boolean(entry && SCORE_VALUES.has(entry.score) && Array.isArray(entry.learnings) && entry.learnings.length === 3 && entry.learnings.every(t => typeof t === 'string' && t.trim())); }
+      function addNode(tag, className, textValue, parent) { const el = document.createElement(tag); if (className) el.className = className; if (textValue != null) el.textContent = textValue; if (parent) parent.appendChild(el); return el; }
+      function render() {
+        const tasks = getTasks();
+        const done = completedCount();
+        const pct = Math.round(done / 5 * 100);
+        $('todayDate').textContent = new Intl.DateTimeFormat('en-CA',{weekday:'long',month:'long',day:'numeric',year:'numeric'}).format(new Date());
+        $('dayKind').textContent = isWeekend() ? 'WEEKEND PLAN' : 'WEEKDAY PLAN';
+        $('heroDescription').textContent = isWeekend()
+          ? 'No tutor sessions today. Keep your TCF momentum with focused drills, official practice, and active absorption.'
+          : 'Two tutor sessions, two official practice blocks, and one AAP session — all while working full time.';
+        $('scheduleHint').textContent = isWeekend() ? 'Weekend working plan · 5 focused hours' : 'Weekday working plan · 5 focused hours';
+        $('heroDone').textContent = done;
+        $('taskCount').textContent = `${done} OF 5 DONE`;
+        $('overviewFraction').textContent = `${done}/5`;
+        $('progressPercent').textContent = `${pct}%`;
+        $('progressBar').style.width = `${pct}%`;
+        $('ringMeter').style.strokeDashoffset = `${2 * Math.PI * 82 * (1 - pct/100)}`;
+        $('progressRingLabel').setAttribute('aria-label', `${done} of 5 study hours complete`);
+        $('victoryBanner').classList.toggle('show', done === 5);
+        taskList.replaceChildren();
+        for (const [index, task] of tasks.entries()) {
+          const doneTask = isCompleted(task.id);
+          const card = addNode('article', `task${doneTask?' is-done':''}`, null, taskList);
+          card.style.setProperty('--accent', style[task.id][0]);
+          card.style.setProperty('--icon-bg', style[task.id][1]);
+          card.dataset.taskId = task.id;
+          const icon = addNode('div','task-icon',null,card);
+          icon.setAttribute('aria-hidden','true');
+          icon.innerHTML = doneTask ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>' : icons[task.id];
+          const body = addNode('div','task-body',null,card);
+          addNode('div','task-index',`SESSION ${String(index + 1).padStart(2,'0')}`,body);
+          const heading = addNode('h3','task-name',null,body);
+          if (task.id === 'aap') {
+            const aapHeading = addNode('a','',task.name,heading);
+            aapHeading.href = AAP_PATH;
+            aapHeading.setAttribute('title','Open Active Absorption Program');
+          } else { heading.textContent = task.name; }
+          addNode('p','task-details',task.sub,body);
+          const info = addNode('div','task-info',null,body);
+          addNode('span','time-chip','60 MINUTES',info);
+          if (task.link) {
+            const link = addNode('a','resource-link',task.linkText,info);
+            link.href = task.link;
+            if (task.link.startsWith('https://')) { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
+          }
+          const btn = addNode('button','action-btn',null,card);
+          btn.type = 'button';
+          btn.textContent = doneTask ? '✓  Edit notes' : 'Complete  ↗';
+          btn.setAttribute('aria-label', `${doneTask ? 'Edit notes for' : 'Complete'} ${task.name}`);
+          btn.addEventListener('click', () => openModal(task.id, doneTask));
+        }
+      }
+      function toast(message) {
+        clearTimeout(toastTimer);
+        const node = $('toast'); node.textContent = message; node.classList.add('show');
+        toastTimer = setTimeout(() => node.classList.remove('show'), 2600);
+      }
+      function openModal(id, editing) {
+        rollover();
+        activeTaskId = id;
+        isEditing = editing && isCompleted(id);
+        modalLastFocus = document.activeElement;
+        const task = getTasks().find(item => item.id === id);
+        if (!task) return;
+        $('reflectionForm').reset();
+        $('modalKicker').textContent = isEditing ? 'EDIT SAVED SESSION' : 'SESSION REFLECTION';
+        $('modalTitle').textContent = task.name;
+        $('modalDesc').textContent = 'Choose your A1–C2 score and write three specific things you learned. All four inputs are required.';
+        $('saveReflection').textContent = isEditing ? 'Save changes ✓' : 'Finish & save ✓';
+        if (isEditing) {
+          const entry = state.tasks[id];
+          const radio = $('reflectionForm').querySelector(`input[name="score"][value="${entry.score}"]`);
+          if (radio) radio.checked = true;
+          $('lesson1').value = entry.learnings[0];
+          $('lesson2').value = entry.learnings[1];
+          $('lesson3').value = entry.learnings[2];
+        }
+        $('taskOverlay').classList.add('visible');
+        document.body.classList.add('dialog-open');
+        $('lesson1').focus();
+      }
+      function closeModal() {
+        if (!$('taskOverlay').classList.contains('visible')) return;
+        $('taskOverlay').classList.remove('visible'); document.body.classList.remove('dialog-open');
+        activeTaskId = null;
+        if (modalLastFocus && modalLastFocus.isConnected) modalLastFocus.focus();
+      }
+      function celebrate(id) {
+        const card = taskList.querySelector(`[data-task-id="${id}"]`);
+        if (!card) return;
+        card.classList.add('is-celebrating');
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        for (let i = 0; i < 14; i++) {
+          const dot = addNode('span','spark',null,card);
+          const angle = (Math.PI * 2 * i / 14);
+          dot.style.setProperty('--dx', `${Math.cos(angle) * (50 + i%3 * 9)}px`);
+          dot.style.setProperty('--dy', `${Math.sin(angle) * (50 + i%3 * 9)}px`);
+          dot.style.background = i%3===0?'#f7d996':i%2===0?'#8eb3ff':'#6fe0b2';
+          dot.style.animationDelay = `${i * 18}ms`;
+          dot.addEventListener('animationend', () => dot.remove(), {once:true});
+        }
+      }
+      function openOverview() {
+        rollover();
+        overviewLastFocus = document.activeElement;
+        $('drawerDate').textContent = `${$('todayDate').textContent} · ${isWeekend()?'Weekend':'Weekday'} working plan`;
+        renderOverview();
+        $('overviewOverlay').classList.add('visible'); document.body.classList.add('dialog-open'); $('overviewClose').focus();
+      }
+      function closeOverview() {
+        if (!$('overviewOverlay').classList.contains('visible')) return;
+        $('overviewOverlay').classList.remove('visible'); document.body.classList.remove('dialog-open');
+        if (overviewLastFocus && overviewLastFocus.isConnected) overviewLastFocus.focus();
+      }
+      function renderOverview() {
+        const root = $('overviewList'); root.replaceChildren();
+        for (const task of getTasks()) {
+          const ready = isCompleted(task.id);
+          const entry = state.tasks[task.id];
+          const block = addNode('div','overview-entry',null,root);
+          const head = addNode('div','entry-head',null,block);
+          const naming = addNode('div','',null,head);
+          addNode('div','entry-title',task.name,naming);
+          addNode('div','entry-sub',`60 minutes · ${ready?'Completed':'Not completed'}`,naming);
+          const right = addNode('div','entry-score',null,head);
+          if (ready) {
+            addNode('span','score-tag',entry.score,right);
+            const edit = addNode('button','edit-btn','Edit ↗',right); edit.type='button';
+            edit.addEventListener('click', () => {closeOverview();openModal(task.id,true);});
+            const notes = addNode('div','entry-notes',null,block);
+            entry.learnings.forEach((value, i) => addNode('div','',`${i + 1}. ${value}`,notes));
+          } else { addNode('span','pending-tag','Pending',right); }
+        }
+      }
+      function download() {
+        rollover();
+        if (completedCount() !== 5) { toast('Complete all five sessions to unlock your ScoreCard.'); return; }
+        const tasks = {};
+        for (const task of getTasks()) {
+          const entry = state.tasks[task.id];
+          tasks[task.id] = {
+            category:task.category,
+            task:task.sub,
+            durationMinutes:task.minutes,
+            completed:true,
+            score:entry.score,
+            learning1:entry.learnings[0],
+            learning2:entry.learnings[1],
+            learning3:entry.learnings[2],
+            completedAt:entry.completedAt,
+            lastEditedAt:entry.lastEditedAt || null
+          };
+        }
+        const scorecard = {
+          format:'master-french-scorecard', version:1,
+          date:state.date,
+          weekday:new Intl.DateTimeFormat('en-CA',{weekday:'long'}).format(new Date()),
+          schedule:'working_full_time',
+          dayType:state.dayType,
+          plannedHours:5,
+          completedHours:5,
+          completedSessions:5,
+          totalSessions:5,
+          generatedAt:new Date().toISOString(),
+          tasks
+        };
+        const blob = new Blob([JSON.stringify(scorecard,null,2)],{type:'application/json'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href=url; a.download=`master-french-scorecard-${state.date}-work.json`;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        toast('ScoreCard downloaded. Félicitations!');
+      }
+
+      $('reflectionForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        rollover();
+        if (!activeTaskId) return;
+        const data = new FormData(event.currentTarget);
+        const score = data.get('score');
+        const learnings = ['lesson1','lesson2','lesson3'].map(field => String(data.get(field)||'').trim());
+        if (!SCORE_VALUES.has(score) || learnings.some(value => !value)) { toast('Please select a score and fill in all three learnings.'); return; }
+        const previouslySaved = state.tasks[activeTaskId];
+        const wasEditing = isEditing;
+        const savedId = activeTaskId;
+        state.tasks[savedId] = {
+          score, learnings,
+          completedAt: previouslySaved && previouslySaved.completedAt || new Date().toISOString(),
+          lastEditedAt:wasEditing ? new Date().toISOString() : null
+        };
+        persist(); closeModal(); render(); celebrate(savedId);
+        toast(wasEditing ? 'Your session notes were updated.' : 'Session saved. Très bien!');
+      });
+      $('modalClose').addEventListener('click',closeModal);
+      $('cancelReflection').addEventListener('click',closeModal);
+      $('overviewButton').addEventListener('click',openOverview);
+      $('overviewClose').addEventListener('click',closeOverview);
+      $('downloadScorecard').addEventListener('click',download);
+      $('taskOverlay').addEventListener('click',event => { if (event.target === $('taskOverlay')) closeModal(); });
+      $('overviewOverlay').addEventListener('click',event => { if (event.target === $('overviewOverlay')) closeOverview(); });
+      document.addEventListener('keydown',event => {
+        if (event.key === 'Escape') { if ($('taskOverlay').classList.contains('visible')) closeModal(); else closeOverview(); }
+        // Keep keyboard focus inside the active dialog.
+        if (event.key === 'Tab') {
+          const area = $('taskOverlay').classList.contains('visible') ? $('taskOverlay').querySelector('.modal') : $('overviewOverlay').classList.contains('visible') ? $('overviewOverlay').querySelector('.drawer') : null;
+          if (!area) return;
+          const focusable = [...area.querySelectorAll('button:not([disabled]),input:not([disabled]),textarea:not([disabled]),a[href]')].filter(el=>el.getClientRects().length);
+          if (!focusable.length) return;
+          const first=focusable[0], last=focusable[focusable.length-1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+          if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        }
+      });
+      document.addEventListener('visibilitychange',()=>{ if (!document.hidden) rollover(); });
+      window.addEventListener('focus',rollover);
+      setInterval(rollover,60000);
+      load(); render();
+    })();
+  </script>
+</body>
+</html>

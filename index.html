@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#091a37" />
+  <meta name="description" content="Master French — your daily TCF Canada study companion." />
+  <title>MASTER FRENCH | TCF Canada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --navy: #091a37;
+      --navy-soft: #102c55;
+      --blue: #4377ee;
+      --red: #f04d63;
+      --white: #f9fbff;
+      --muted: #b6c4de;
+      --font: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      position: relative;
+      display: grid;
+      min-height: 100vh;
+      min-height: 100svh;
+      overflow: hidden;
+      place-items: center;
+      isolation: isolate;
+      padding: clamp(28px, 5vw, 76px) 20px;
+      background:
+        radial-gradient(circle at 13% 16%, rgba(56, 106, 214, .23), transparent 34%),
+        radial-gradient(circle at 88% 85%, rgba(240, 77, 99, .14), transparent 34%),
+        linear-gradient(138deg, #07152d 0%, #0b2143 58%, #07172f 100%);
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: min(850px, 95vw);
+      height: min(850px, 95vw);
+      top: -520px;
+      right: -260px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 50%;
+      box-shadow: 0 0 0 125px rgba(255,255,255,.018), 0 0 0 250px rgba(255,255,255,.012);
+      pointer-events: none;
+    }
+
+    .page::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 400px;
+      height: 400px;
+      bottom: -320px;
+      left: -150px;
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 50%;
+      box-shadow: 0 0 0 95px rgba(255,255,255,.016);
+      pointer-events: none;
+    }
+
+    .content {
+      width: min(100%, 880px);
+      margin-inline: auto;
+      text-align: center;
+      animation: arrive .85s cubic-bezier(.16, 1, .3, 1) both;
+    }
+
+    .overline {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: #c5d2ea;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+    }
+
+    .flag {
+      display: inline-flex;
+      gap: 3px;
+      transform: skewX(-13deg);
+      height: 16px;
+    }
+    .flag i { width: 5px; display: block; border-radius: 1px; }
+    .flag i:nth-child(1) { background: #5986ff; }
+    .flag i:nth-child(2) { background: #fff; }
+    .flag i:nth-child(3) { background: #fa5969; }
+
+    h1 {
+      margin: 24px 0 12px;
+      color: #fff;
+      font-size: clamp(3.3rem, 10vw, 6.65rem);
+      font-weight: 800;
+      line-height: .99;
+      letter-spacing: -.065em;
+      text-wrap: balance;
+    }
+
+    .slogan {
+      margin: 0;
+      color: #e4ebfa;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.35rem, 3.6vw, 2rem);
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: .01em;
+    }
+
+    .tricolour {
+      display: flex;
+      width: 90px;
+      height: 4px;
+      margin: 31px auto 29px;
+      overflow: hidden;
+      border-radius: 999px;
+    }
+    .tricolour span { flex: 1; }
+    .tricolour span:nth-child(1) { background: #527dff; }
+    .tricolour span:nth-child(2) { background: #fff; }
+    .tricolour span:nth-child(3) { background: #fc5368; }
+
+    .date-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 38px;
+    }
+    .date-pill, .day-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 999px;
+      background: rgba(255,255,255,.065);
+      padding: 7px 15px;
+      color: #dce6f8;
+      font-size: .83rem;
+      font-weight: 600;
+      letter-spacing: .01em;
+    }
+    .date-pill svg { margin-right: 8px; opacity: .85; }
+    .day-pill {
+      gap: 7px;
+      border-color: rgba(92,140,255,.25);
+      background: rgba(61,113,226,.17);
+      color: #bcd1ff;
+      font-size: .69rem;
+      font-weight: 800;
+      letter-spacing: .11em;
+    }
+    .day-pill::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #82a7ff;
+      box-shadow: 0 0 0 3px rgba(130,167,255,.1);
+    }
+    .day-pill.weekend {
+      color: #ffd3dc;
+      border-color: rgba(240,77,99,.26);
+      background: rgba(240,77,99,.13);
+    }
+    .day-pill.weekend::before { background: #ff8494; box-shadow: 0 0 0 3px rgba(255,132,148,.1); }
+
+    h2 {
+      margin: 38px 0 23px;
+      color: #fff;
+      font-size: clamp(1.5rem, 4vw, 2.15rem);
+      font-weight: 700;
+      letter-spacing: -.04em;
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+      text-align: left;
+    }
+
+    .choice {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-height: 148px;
+      padding: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 22px;
+      background: #fdfdff;
+      box-shadow: 0 15px 42px rgba(0, 0, 0, .13);
+      color: #12264a;
+      text-decoration: none;
+      transition: transform .35s cubic-bezier(.2, .9, .2, 1), box-shadow .35s ease, border-color .25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .choice::before {
+      content: "";
+      position: absolute;
+      height: 4px;
+      top: 0;
+      left: 23px;
+      right: 23px;
+      border-radius: 0 0 999px 999px;
+      transform: scaleX(.23);
+      transform-origin: left;
+      transition: transform .38s cubic-bezier(.2, .9, .2, 1);
+    }
+    .choice.work::before { background: var(--blue); }
+    .choice.holiday::before { background: var(--red); }
+    .choice:hover, .choice:focus-visible {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,.95);
+      box-shadow: 0 27px 58px rgba(0,0,0,.25);
+    }
+    .choice:hover::before, .choice:focus-visible::before { transform: scaleX(1); }
+    .choice:active { transform: translateY(-1px) scale(.985); transition-duration: .1s; }
+    .choice:focus-visible { outline: 3px solid #91b0ff; outline-offset: 5px; }
+
+    .icon-wrap {
+      display: grid;
+      width: 60px;
+      height: 60px;
+      flex: 0 0 60px;
+      place-items: center;
+      border-radius: 18px;
+      transition: transform .3s cubic-bezier(.2,.9,.2,1);
+    }
+    .choice:hover .icon-wrap { transform: rotate(-5deg) scale(1.07); }
+    .work .icon-wrap { background: #eaf0ff; color: #3565d8; }
+    .holiday .icon-wrap { background: #fff0f2; color: #d94258; }
+
+    .choice-copy { min-width: 0; flex: 1; }
+    .choice-name {
+      display: block;
+      font-size: clamp(1.08rem, 2.6vw, 1.3rem);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -.035em;
+    }
+    .choice-desc {
+      display: block;
+      margin-top: 8px;
+      color: #697994;
+      font-size: .84rem;
+      font-weight: 600;
+    }
+    .arrow {
+      display: grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      flex: 0 0 auto;
+      align-self: flex-end;
+      border-radius: 50%;
+      color: #71809a;
+      transition: transform .28s ease, color .28s ease;
+    }
+    .choice:hover .arrow { transform: translateX(4px); color: #132d58; }
+
+    .footnote {
+      margin: 25px 0 0;
+      color: #a5b9d8;
+      font-size: .85rem;
+      line-height: 1.6;
+    }
+    .footnote strong { color: #e6edfa; font-weight: 700; }
+
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 650px) {
+      .page { padding: 36px 20px 43px; }
+      .overline { font-size: 10px; letter-spacing: .22em; }
+      h1 { margin-top: 22px; font-size: clamp(3.2rem, 13vw, 5rem); }
+      .tricolour { margin: 25px auto; }
+      h2 { margin: 31px 0 19px; }
+      .choices { grid-template-columns: 1fr; gap: 13px; }
+      .choice { min-height: 114px; padding: 19px 20px; border-radius: 19px; }
+      .icon-wrap { width: 54px; height: 54px; flex-basis: 54px; border-radius: 16px; }
+      .footnote { margin-top: 21px; }
+    }
+
+    @media (max-width: 360px) {
+      .choice { gap: 12px; padding: 15px; }
+      .icon-wrap { width: 48px; height: 48px; flex-basis: 48px; }
+      .arrow { width: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="content" aria-labelledby="main-title">
+      <div class="overline">
+        <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
+        TCF CANADA · STUDY COMPANION
+      </div>
+
+      <h1 id="main-title">MASTER FRENCH</h1>
+      <p class="slogan" lang="fr">Le secret, c'est l'action.</p>
+      <div class="tricolour" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="date-line" aria-live="polite" aria-atomic="true">
+        <span class="date-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>
+          </svg>
+          <span id="today-date">Checking your date…</span>
+        </span>
+        <span class="day-pill" id="day-type">TODAY</span>
+      </div>
+
+      <h2>Your Schedule today?</h2>
+
+      <nav class="choices" aria-label="Choose today's schedule">
+        <a class="choice work" href="./work/index.html">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13a18 18 0 0 0 18 0M12 12v3"/>
+            </svg>
+          </span>
+          <span class="choice-copy">
+            <span class="choice-name">Working Full Time</span>
+            <span class="choice-desc">Your 5-hour study plan</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </span>
+        </a>
+
+        <a class="choice holiday" href="./holiday/index.html">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+            </svg>
+          </span>
+          <span class="choice-copy">
+            <span class="choice-name">Day Off</span>
+            <span class="choice-desc">Your 7-hour study plan</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </span>
+        </a>
+      </nav>
+
+      <p class="footnote">Your <strong>weekday or weekend</strong> schedule is determined automatically from your device's date.</p>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const dateElement = document.getElementById('today-date');
+      const dayTypeElement = document.getElementById('day-type');
+
+      function refreshDate() {
+        const now = new Date(); // Uses the device's own date and time zone.
+        const isWeekend = now.getDay() === 0 || now.getDay() === 6;
+        dateElement.textContent = new Intl.DateTimeFormat('en-CA', {
+          weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
+        }).format(now);
+        dayTypeElement.textContent = isWeekend ? 'WEEKEND' : 'WEEKDAY';
+        dayTypeElement.classList.toggle('weekend', isWeekend);
+      }
+
+      refreshDate();
+      // Refreshes if the tab stays open past midnight or the device clock changes.
+      setInterval(refreshDate, 60_000);
+      window.addEventListener('focus', refreshDate);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) refreshDate();
+      });
+    })();
+  </script>
+</body>
+</html>
