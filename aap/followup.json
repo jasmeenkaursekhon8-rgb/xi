@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-08",
+  "title": "Réflexion : apprendre tout au long de la vie",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Selon vous, pourquoi est-il important de continuer à apprendre après avoir terminé ses études ? Donnez deux raisons."
+    },
+    {
+      "id": 2,
+      "question": "Quels sont les principaux obstacles rencontrés par une personne qui travaille à temps plein et souhaite apprendre le français ?"
+    },
+    {
+      "id": 3,
+      "question": "Préférez-vous étudier un peu chaque jour ou pendant de longues séances le week-end ? Justifiez votre réponse avec un exemple personnel."
+    },
+    {
+      "id": 4,
+      "question": "Comment les applications et les outils d'intelligence artificielle peuvent-ils faciliter l'apprentissage d'une langue ? Quelles sont leurs limites ?"
+    },
+    {
+      "id": 5,
+      "question": "Décrivez une situation dans laquelle vous avez fait une erreur en apprenant quelque chose. Qu'avez-vous fait pour vous améliorer ?"
+    },
+    {
+      "id": 6,
+      "question": "Pensez-vous que les employeurs devraient payer les formations de leurs salariés ? Présentez un argument favorable et un argument contraire."
+    },
+    {
+      "id": 7,
+      "question": "Imaginez que votre ami perd sa motivation pour apprendre le français. Quels conseils pratiques lui donneriez-vous pour reprendre confiance ?"
+    },
+    {
+      "id": 8,
+      "question": "Quelles différences voyez-vous entre apprendre seul à la maison et suivre des cours en groupe ? Quelle méthode choisiriez-vous et pourquoi ?"
+    },
+    {
+      "id": 9,
+      "question": "Si vous pouviez consacrer une heure supplémentaire par jour à une nouvelle compétence, laquelle choisiriez-vous ? Expliquez votre objectif et votre méthode."
+    },
+    {
+      "id": 10,
+      "question": "Rédigez une courte conclusion : les études et la formation continue doivent-elles être considérées comme un droit, une responsabilité individuelle ou les deux ?"
+    }
+  ]
+}

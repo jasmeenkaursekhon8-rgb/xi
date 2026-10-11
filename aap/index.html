@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Active Absorption: daily French speaking, translation, and written follow-up practice for TCF preparation.">
+  <title>Active Absorption | Master French</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <!-- Reusable inline icons. No icon library or server is required. -->
+  <svg class="icon-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M5 12h14"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></symbol>
+    <symbol id="icon-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></symbol>
+    <symbol id="icon-pen" viewBox="0 0 24 24"><path d="m15 5 4 4M4 20l4.5-1 10.7-10.7a2.8 2.8 0 0 0-4-4L4.5 15 4 20Z"/></symbol>
+    <symbol id="icon-message" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-8 8c-1.3 0-2.6-.3-3.7-.9L4 20l1.4-4.3A8 8 0 1 1 20 11.5Z"/></symbol>
+    <symbol id="icon-volume" viewBox="0 0 24 24"><path d="M5 9H2v6h3l5 4V5L5 9Zm9-.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 5 12 7-12 7V5Z"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="m12 2 2.3 6.7L21 11l-6.7 2.3L12 20l-2.3-6.7L3 11l6.7-2.3L12 2ZM19 17l.7 2.3L22 20l-2.3.7L19 23l-.7-2.3L16 20l2.3-.7L19 17Z"/></symbol>
+    <symbol id="icon-headphones" viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3M4 14h3v7H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 1-2Zm16 0h-3v7h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-1-2Z"/></symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v14"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-4Zm-4 10 3 3 5-6"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.2"/></symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3V10Zm6 10v-7h6v7"/></symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5m-3-2a7 7 0 0 1 12-3l2 5M4 12l2 5a7 7 0 0 0 12-3"/></symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="icon-alert" viewBox="0 0 24 24"><path d="M10.4 4a1.8 1.8 0 0 1 3.2 0l8 14a1.8 1.8 0 0 1-1.6 2.7H4a1.8 1.8 0 0 1-1.6-2.7l8-14ZM12 9v5m0 3v.2"/></symbol>
+  </svg>
+
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="ambient ambient-grid" aria-hidden="true"></div>
+
+  <div class="app-shell" id="appShell">
+    <!-- Persistent application header -->
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Back to Master French homepage">
+        <span class="brand-mark" aria-hidden="true">A<span>+</span></span>
+        <span class="brand-copy">
+          <strong>ACTIVE ABSORPTION</strong>
+          <small>MASTER FRENCH / DAILY LAB</small>
+        </span>
+      </a>
+      <div class="topbar-meta">
+        <span class="date-pill"><svg class="icon"><use href="#icon-calendar"/></svg><time id="currentDate">Today</time></span>
+        <span class="storage-pill"><span class="status-dot" aria-hidden="true"></span><span id="globalSaveStatus" role="status" aria-live="polite">Stored on this device</span></span>
+      </div>
+    </header>
+
+    <!-- Non-blocking error banner; appears when a daily data file cannot be loaded. -->
+    <aside class="global-alert" id="loadError" role="alert" hidden>
+      <svg class="icon"><use href="#icon-alert"/></svg>
+      <span id="loadErrorText">We couldn't load today's practice files.</span>
+      <button type="button" id="retryLoadButton" class="text-button">Try again <svg class="icon"><use href="#icon-refresh"/></svg></button>
+    </aside>
+
+    <main id="mainContent">
+      <!-- ========== CHOOSE A TASK ========== -->
+      <section id="viewHome" class="view view-home" data-view="home" aria-labelledby="homeHeading">
+        <div class="home-intro">
+          <div class="eyebrow"><span class="eyebrow-line"></span> YOUR DAILY FRENCH WORKSPACE <span class="eyebrow-line"></span></div>
+          <h1 id="homeHeading">Learn it. <span class="text-gradient">Use it.</span><br>Make it stick.</h1>
+          <p>Three active exercises. One stronger command of French. Choose where to begin today.</p>
+        </div>
+
+        <div class="task-grid" aria-label="Choose one of three practice tasks">
+          <button type="button" class="task-card task-card-speaking" data-open-task="speaking" aria-label="Open Speaking Practice">
+            <span class="task-card-upper"><span class="task-index">01 / 03</span><span class="task-state" id="homeSpeakingStatus">Not started</span></span>
+            <span class="task-art task-art-speaking" aria-hidden="true"><svg class="icon"><use href="#icon-mic"/></svg><span class="art-orbit art-orbit-one"></span><span class="art-orbit art-orbit-two"></span></span>
+            <span class="task-card-bottom"><span class="task-category">FLUENCY · SPOKEN FRENCH</span><strong>Speaking<br>Practice</strong><span class="task-description">Timed prompts. Think quickly, then speak with confidence.</span><span class="task-card-action">ENTER PRACTICE <svg class="icon"><use href="#icon-arrow-right"/></svg></span></span>
+          </button>
+          <button type="button" class="task-card task-card-translation" data-open-task="translation" aria-label="Open Essay Translation">
+            <span class="task-card-upper"><span class="task-index">02 / 03</span><span class="task-state" id="homeTranslationStatus">Not started</span></span>
+            <span class="task-art task-art-translation" aria-hidden="true"><svg class="icon"><use href="#icon-pen"/></svg><span class="art-paper art-paper-one"></span><span class="art-paper art-paper-two"></span></span>
+            <span class="task-card-bottom"><span class="task-category">EXPRESSION · WRITTEN FRENCH</span><strong>Essay<br>Translation</strong><span class="task-description">Transform an English passage into natural, precise French.</span><span class="task-card-action">OPEN EDITOR <svg class="icon"><use href="#icon-arrow-right"/></svg></span></span>
+          </button>
+          <button type="button" class="task-card task-card-followup" data-open-task="followup" aria-label="Open Follow-Up Questions">
+            <span class="task-card-upper"><span class="task-index">03 / 03</span><span class="task-state" id="homeFollowupStatus">Not started</span></span>
+            <span class="task-art task-art-followup" aria-hidden="true"><svg class="icon"><use href="#icon-message"/></svg><span class="art-bubble art-bubble-one"></span><span class="art-bubble art-bubble-two"></span></span>
+            <span class="task-card-bottom"><span class="task-category">REASONING · ACTIVE RECALL</span><strong>Follow-Up<br>Questions</strong><span class="task-description">Build thoughtful French answers, one question at a time.</span><span class="task-card-action">START WRITING <svg class="icon"><use href="#icon-arrow-right"/></svg></span></span>
+          </button>
+        </div>
+        <div class="home-footer"><svg class="icon"><use href="#icon-shield"/></svg><span>Your writing and progress save automatically on this browser, separately for each day.</span><span class="footer-divider" aria-hidden="true"></span><span id="homeCompletedCount">0 of 3 tasks completed</span></div>
+      </section>
+
+      <!-- ========== TASK 1: SPEAKING PRACTICE ========== -->
+      <section id="viewSpeaking" class="view view-workspace view-speaking" data-view="speaking" aria-labelledby="speakingHeading" hidden>
+        <div class="workspace-header">
+          <button class="back-button" type="button" data-go-home><svg class="icon"><use href="#icon-arrow-left"/></svg><span>ALL TASKS</span></button>
+          <span class="workspace-number">EXERCISE 01 <span>/</span> 03</span>
+        </div>
+        <div class="workspace-heading-row">
+          <div><div class="eyebrow eyebrow-left">SPEAK CLEARLY. THINK IN FRENCH.</div><h1 id="speakingHeading">Speaking <span class="text-gradient">Practice.</span></h1><p>Read, gather your thoughts, and deliver your answer aloud.</p></div>
+          <div class="workspace-side-note"><svg class="icon"><use href="#icon-headphones"/></svg><span>AUDIO RECORDED<br>ON YOUR PHONE</span></div>
+        </div>
+
+        <!-- Nothing from the first question is visible before Start. -->
+        <article id="speakingIntro" class="speaking-panel speaking-intro" aria-labelledby="speakingIntroHeading">
+          <span class="session-icon"><svg class="icon"><use href="#icon-lock"/></svg></span>
+          <span class="panel-kicker">YOUR SESSION IS READY</span>
+          <h2 id="speakingIntroHeading">Ready when you are.</h2>
+          <p>Your questions stay hidden until you begin. Each prompt has a dedicated reading period, followed automatically by speaking time. You cannot go back or preview the next question.</p>
+          <div class="session-facts"><span><svg class="icon"><use href="#icon-book"/></svg><strong id="speakingIntroCount">—</strong> QUESTIONS</span><span><svg class="icon"><use href="#icon-clock"/></svg> TIMED PRACTICE</span><span><svg class="icon"><use href="#icon-volume"/></svg> FRENCH PLAYBACK</span></div>
+          <div class="phone-reminder"><svg class="icon"><use href="#icon-info"/></svg><span><strong>Before you start:</strong> Turn on the voice recorder on your phone. This website does not record your voice.</span></div>
+          <button type="button" id="beginSpeakingSession" class="button button-primary button-large"><svg class="icon"><use href="#icon-play"/></svg> START SPEAKING SESSION <svg class="icon end-icon"><use href="#icon-arrow-right"/></svg></button>
+          <span class="micro-note">Starting reveals Question 1 and begins its reading timer.</span>
+        </article>
+
+        <article id="speakingLive" class="speaking-panel speaking-live" aria-label="Current speaking question" hidden>
+          <div class="session-progress-top"><span class="panel-kicker">QUESTION <strong id="speakingQuestionNumber">1</strong> OF <strong id="speakingQuestionTotal">—</strong></span><span id="speakingPhaseLabel" class="phase-tag">READING TIME</span></div>
+          <div class="question-progress" id="speakingProgressSegments" aria-label="Question progress"></div>
+          <div class="question-content"><span class="question-overline">VOTRE QUESTION</span><div class="question-and-sound"><h2 id="speakingQuestionText" lang="fr" aria-live="polite"></h2><button type="button" id="playSpeakingQuestion" class="sound-button" aria-label="Read this question aloud in French" title="Hear the question in French"><svg class="icon"><use href="#icon-volume"/></svg></button></div><span id="speakingVoiceStatus" class="voice-hint" role="status" aria-live="polite">Select the speaker icon to hear the question.</span></div>
+          <div class="countdown-zone"><div class="timer-dial"><svg viewBox="0 0 200 200" class="timer-ring" aria-hidden="true"><circle class="timer-track" cx="100" cy="100" r="87"/><circle id="speakingTimerRing" class="timer-progress" cx="100" cy="100" r="87"/></svg><div class="timer-inside"><time id="speakingTimer" class="timer-digits" aria-label="Time remaining">00:00</time><span id="speakingTimerCaption" class="timer-caption">TIME TO READ</span></div></div><p id="speakingInstructions" class="timer-help" aria-live="polite">Read the prompt. Speaking time begins automatically when the reading timer finishes.</p></div>
+          <div class="session-controls"><span id="speakingAdvanceHint" class="control-hint"><svg class="icon"><use href="#icon-lock"/></svg> Next prompt is locked until time runs out.</span><button type="button" id="nextSpeakingQuestion" class="button button-primary" hidden> NEXT QUESTION <svg class="icon"><use href="#icon-arrow-right"/></svg></button><button type="button" id="finishSpeakingSession" class="button button-primary" hidden> FINISH SESSION <svg class="icon"><use href="#icon-check"/></svg></button></div>
+        </article>
+
+        <article id="speakingComplete" class="speaking-panel speaking-complete" hidden>
+          <div class="complete-symbol"><svg class="icon"><use href="#icon-check-circle"/></svg></div>
+          <span class="panel-kicker">SESSION COMPLETE</span>
+          <h2>Strong work. Session finished.</h2>
+          <p>Stop the recording on your phone and save it. Submit that audio to your AI agent for pronunciation, fluency, grammar, and vocabulary feedback.</p>
+          <div class="complete-steps"><span><svg class="icon"><use href="#icon-check"/></svg> Stop recording</span><span><svg class="icon"><use href="#icon-check"/></svg> Save audio</span><span><svg class="icon"><use href="#icon-check"/></svg> Analyze with AI agent</span></div>
+          <button type="button" class="button button-secondary" data-go-home><svg class="icon"><use href="#icon-home"/></svg> RETURN TO ALL TASKS</button>
+        </article>
+      </section>
+
+      <!-- ========== TASK 2: ENGLISH TO FRENCH ESSAY ========== -->
+      <section id="viewTranslation" class="view view-workspace view-translation" data-view="translation" aria-labelledby="translationHeading" hidden>
+        <div class="workspace-header"><button class="back-button" type="button" data-go-home><svg class="icon"><use href="#icon-arrow-left"/></svg><span>ALL TASKS</span></button><span class="workspace-number">EXERCISE 02 <span>/</span> 03</span></div>
+        <div class="workspace-heading-row workspace-heading-actions"><div><div class="eyebrow eyebrow-left">READ IN ENGLISH. THINK IN FRENCH.</div><h1 id="translationHeading">Essay <span class="text-gradient">Translation.</span></h1><p>Translate the passage naturally, using every target word below.</p></div><button type="button" id="downloadTranslation" class="button button-primary"><svg class="icon"><use href="#icon-download"/></svg> DOWNLOAD .TXT</button></div>
+        <div class="translation-layout">
+          <article class="text-pane source-pane" aria-labelledby="sourceHeading"><div class="pane-header"><span class="pane-label"><span class="language-tag">EN</span> ORIGINAL PASSAGE</span><span id="englishWordCount" class="pane-meta">— WORDS</span></div><div class="pane-inner"><h2 id="sourceHeading">English source</h2><div id="englishEssay" class="essay-source" lang="en">Your English paragraph will load here.</div></div><div class="pane-footer"><svg class="icon"><use href="#icon-book"/></svg> Read for meaning before translating.</div></article>
+          <article class="text-pane editor-pane" aria-labelledby="editorHeading"><div class="pane-header"><span class="pane-label"><span class="language-tag language-tag-fr">FR</span> YOUR TRANSLATION</span><span id="translationSaveStatus" class="pane-meta" role="status" aria-live="polite">READY TO WRITE</span></div><div class="pane-inner editor-inner"><h2 id="editorHeading">Your French version</h2><label for="frenchTranslation" class="sr-only">Type your French translation of the English essay</label><textarea id="frenchTranslation" class="translation-input" lang="fr" spellcheck="true" autocapitalize="sentences" autocomplete="off" placeholder="Commencez à écrire votre traduction ici…"></textarea></div><div class="pane-footer"><svg class="icon"><use href="#icon-pen"/></svg><span>Saved automatically on this device.</span><span id="translationWordCount" class="editor-word-count">0 WORDS</span></div></article>
+        </div>
+        <div class="vocab-tray" aria-labelledby="vocabHeading"><div class="vocab-tray-label"><span class="vocab-icon"><svg class="icon"><use href="#icon-sparkles"/></svg></span><div><h2 id="vocabHeading">WORDS TO USE</h2><p>Include these in your translation</p></div></div><ul id="requiredWords" class="vocab-list" lang="fr" aria-label="Required French vocabulary"></ul></div>
+      </section>
+
+      <!-- ========== TASK 3: FOLLOW-UP QUESTIONS ========== -->
+      <section id="viewFollowup" class="view view-workspace view-followup" data-view="followup" aria-labelledby="followupHeading" hidden>
+        <div class="workspace-header"><button class="back-button" type="button" data-go-home><svg class="icon"><use href="#icon-arrow-left"/></svg><span>ALL TASKS</span></button><span class="workspace-number">EXERCISE 03 <span>/</span> 03</span></div>
+        <div class="workspace-heading-row workspace-heading-actions"><div><div class="eyebrow eyebrow-left">REFLECT. EXPLAIN. EXPRESS.</div><h1 id="followupHeading">Follow-Up <span class="text-gradient">Questions.</span></h1><p>Form complete answers in French. Your work saves as you type.</p></div><button type="button" id="downloadFollowup" class="button button-primary"><svg class="icon"><use href="#icon-download"/></svg> DOWNLOAD ANSWERS</button></div>
+        <div class="followup-summary"><div class="summary-icon"><svg class="icon"><use href="#icon-message"/></svg></div><div class="summary-copy"><strong id="followupTitle">Today's reflection</strong><span id="followupSubtitle">Consider each question before answering in your own words.</span></div><div class="summary-counter"><strong id="followupAnsweredCount">0 / 0</strong><span>ANSWERED</span></div></div>
+        <div id="followupQuestions" class="followup-list" aria-label="French follow-up questions"></div>
+        <template id="followupQuestionTemplate"><article class="followup-item" data-followup-item><div class="followup-item-heading"><span class="followup-item-number" data-question-number>01</span><label class="followup-item-question" data-question-label lang="fr"></label><span class="followup-item-check" data-question-check aria-label="Question answered"><svg class="icon"><use href="#icon-check"/></svg></span></div><textarea class="followup-answer" data-followup-answer lang="fr" spellcheck="true" autocapitalize="sentences" autocomplete="off" rows="4" placeholder="Écrivez votre réponse en français…"></textarea><div class="followup-item-footer"><span data-question-save>Saved automatically</span><span data-question-words>0 words</span></div></article></template>
+        <div class="followup-bottom-note"><svg class="icon"><use href="#icon-shield"/></svg><span>Your answers stay in this browser for today unless you download them.</span></div>
+      </section>
+    </main>
+
+    <footer class="app-footer"><span>ACTIVE ABSORPTION PROGRAM</span><span class="app-footer-middle">A LITTLE FRENCH, EVERY DAY. <span aria-hidden="true">✦</span> BETTER FRENCH, EVERY WEEK.</span><span>MADE FOR FOCUSED PRACTICE</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden><svg class="icon"><use href="#icon-check-circle"/></svg><span id="toastMessage"></span></div>
+</body>
+</html>
