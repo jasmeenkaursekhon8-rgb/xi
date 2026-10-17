@@ -3,73 +3,73 @@
   "questions": [
     {
       "id": 1,
-      "question": "Parlez de votre famille, de votre quartier et de votre routine du matin. Qu'est-ce que vous aimez le plus dans votre vie actuelle ?",
+      "question": "Présentez votre famille ou vos amis proches. Décrivez leur personnalité et ce que vous faites ensemble pendant le week-end.",
       "reading_seconds": 20,
       "speaking_seconds": 90
     },
     {
       "id": 2,
-      "question": "Racontez un voyage ou une sortie qui ne s'est pas passé comme prévu. Qu'est-ce qui est arrivé et comment avez-vous réglé les problèmes ?",
+      "question": "Racontez une sortie ou un voyage récent. Où êtes-vous allé(e), avec qui, et qu'avez-vous aimé ou moins aimé ?",
       "reading_seconds": 25,
       "speaking_seconds": 120
     },
     {
       "id": 3,
-      "question": "Vous voulez louer une voiture pour le week-end. Quelles questions poseriez-vous à l'agence au sujet du prix, de l'assurance, de la durée de la location et des conditions ?",
+      "question": "Vous souhaitez vous inscrire à un club de sport. Quelles questions poseriez-vous au sujet des horaires, du prix, de l'équipement et des activités proposées ?",
       "reading_seconds": 30,
       "speaking_seconds": 120
     },
     {
       "id": 4,
-      "question": "Votre cousin va bientôt commencer un nouvel emploi au Canada. Expliquez-lui comment se préparer pour la première semaine, comment s'habiller et comment créer de bonnes relations avec ses collègues.",
+      "question": "Votre voisin vient de s'installer dans votre quartier. Expliquez-lui où faire ses courses, comment trouver un médecin et comment se déplacer en ville.",
       "reading_seconds": 30,
       "speaking_seconds": 150
     },
     {
       "id": 5,
-      "question": "Décrivez un repas ou une fête dont vous gardez un bon souvenir. Qui était présent, qu'avez-vous mangé et pourquoi cet événement était-il important pour vous ?",
+      "question": "Décrivez une application ou un objet que vous utilisez tous les jours. Pourquoi est-il utile, comment l'utilisez-vous et que voudriez-vous améliorer ?",
       "reading_seconds": 30,
       "speaking_seconds": 150
     },
     {
       "id": 6,
-      "question": "Vous voulez convaincre votre voisin de participer au nettoyage du parc du quartier. Présentez l'activité, ses avantages et répondez à deux objections possibles.",
+      "question": "Vous organisez une fête de quartier. Présentez l'événement, ses avantages et répondez à deux objections possibles de vos voisins.",
       "reading_seconds": 35,
       "speaking_seconds": 180
     },
     {
       "id": 7,
-      "question": "Préférez-vous faire vos achats en ligne ou dans les magasins ? Comparez le prix, le choix des produits et la commodité.",
+      "question": "Préférez-vous travailler à la maison ou au bureau ? Comparez la productivité, la vie sociale et les dépenses.",
       "reading_seconds": 30,
       "speaking_seconds": 180
     },
     {
       "id": 8,
-      "question": "Selon vous, les enfants devraient-ils avoir un téléphone cellulaire avant l'âge de douze ans ? Donnez votre opinion et des exemples concrets.",
+      "question": "Selon vous, les réseaux sociaux améliorent-ils ou détériorent-ils les relations entre les gens ? Donnez votre opinion et des exemples concrets.",
       "reading_seconds": 35,
       "speaking_seconds": 180
     },
     {
       "id": 9,
-      "question": "Votre école propose de remplacer certains examens écrits par des projets de groupe. Êtes-vous favorable à ce changement ? Expliquez les avantages, les risques et votre solution.",
+      "question": "Votre entreprise propose de passer à une semaine de travail de quatre jours. Êtes-vous favorable à ce changement ? Expliquez les avantages, les risques et votre solution.",
       "reading_seconds": 35,
       "speaking_seconds": 180
     },
     {
       "id": 10,
-      "question": "Faut-il limiter l'utilisation de la voiture dans les centres-villes ? Défendez votre point de vue en considérant aussi l'opinion opposée.",
+      "question": "Faut-il donner des devoirs à la maison aux enfants chaque soir ? Défendez votre point de vue en considérant aussi l'opinion opposée.",
       "reading_seconds": 40,
       "speaking_seconds": 210
     },
     {
       "id": 11,
-      "question": "Les réseaux sociaux rapprochent-ils les gens ou les isolent-ils ? Présentez des arguments équilibrés et proposez des conseils d'utilisation.",
+      "question": "Les achats en ligne vont-ils remplacer les petits commerces de quartier ? Présentez des arguments équilibrés et proposez des solutions pour aider les commerçants.",
       "reading_seconds": 40,
       "speaking_seconds": 210
     },
     {
       "id": 12,
-      "question": "Imaginez que vous recevez une somme d'argent importante. Quels critères utiliseriez-vous pour décider comment la dépenser ou l'investir ? Expliquez votre plan et les risques possibles.",
+      "question": "Imaginez que l'on vous offre un emploi dans une autre province du Canada. Quels critères utiliseriez-vous pour prendre votre décision ? Expliquez votre plan et les sacrifices possibles.",
       "reading_seconds": 45,
       "speaking_seconds": 210
     }

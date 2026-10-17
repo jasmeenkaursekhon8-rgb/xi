@@ -1,46 +1,46 @@
 {
   "date": "2026-10-16",
-  "title": "Réflexion : le télétravail et l'équilibre de vie",
+  "title": "Réflexion : s'intégrer dans une nouvelle communauté",
   "questions": [
     {
       "id": 1,
-      "question": "Selon vous, quels sont les principaux avantages du télétravail pour un employé ? Donnez deux raisons."
+      "question": "Selon vous, pourquoi est-il important de se faire des amis quand on s'installe dans un nouveau pays ? Donnez deux raisons."
     },
     {
       "id": 2,
-      "question": "Quelles difficultés une personne peut-elle rencontrer quand elle travaille seule à la maison toute la semaine ?"
+      "question": "Quels sont les principaux défis rencontrés par un nouvel arrivant qui cherche un emploi au Canada ?"
     },
     {
       "id": 3,
-      "question": "Préférez-vous travailler à la maison ou au bureau ? Justifiez votre réponse avec un exemple personnel."
+      "question": "Préférez-vous passer votre temps libre avec un petit groupe d'amis ou avec beaucoup de personnes ? Justifiez votre réponse avec un exemple personnel."
     },
     {
       "id": 4,
-      "question": "Comment les appels vidéo et les messages instantanés peuvent-ils aider les équipes à bien communiquer ? Quelles sont leurs limites ?"
+      "question": "Comment les réseaux sociaux peuvent-ils aider un nouvel arrivant à s'intégrer ? Quels sont les risques ?"
     },
     {
       "id": 5,
-      "question": "Décrivez une situation dans laquelle vous avez eu du mal à vous concentrer. Qu'avez-vous fait pour mieux vous organiser ?"
+      "question": "Décrivez une situation dans laquelle vous avez eu un malentendu à cause de la langue. Qu'avez-vous fait pour le résoudre ?"
     },
     {
       "id": 6,
-      "question": "Pensez-vous que les employeurs devraient offrir un budget pour installer un bureau à la maison ? Présentez un argument favorable et un argument contraire."
+      "question": "Pensez-vous que les villes devraient offrir des services gratuits aux nouveaux arrivants ? Présentez un argument favorable et un argument contraire."
     },
     {
       "id": 7,
-      "question": "Imaginez qu'un collègue se sent isolé en télétravail. Quels conseils pratiques lui donneriez-vous pour retrouver le contact avec l'équipe ?"
+      "question": "Imaginez qu'un collègue se sent seul depuis son arrivée au Canada. Quels conseils pratiques lui donneriez-vous pour rencontrer des gens ?"
     },
     {
       "id": 8,
-      "question": "Quelles différences voyez-vous entre une réunion en personne et une réunion en ligne ? Quelle option choisiriez-vous et pourquoi ?"
+      "question": "Quelles différences voyez-vous entre faire du bénévolat et participer à une activité payante ? Quelle option choisiriez-vous et pourquoi ?"
     },
     {
       "id": 9,
-      "question": "Si vous pouviez changer une chose dans votre horaire de travail ou d'études, que choisiriez-vous ? Expliquez votre objectif et les avantages possibles."
+      "question": "Si vous pouviez organiser un événement pour votre communauté, lequel choisiriez-vous ? Expliquez votre objectif et votre organisation."
     },
     {
       "id": 10,
-      "question": "Rédigez une courte conclusion : le travail flexible doit-il être considéré comme un droit, un privilège ou les deux ?"
+      "question": "Rédigez une courte conclusion : l'intégration d'un nouvel arrivant est-elle la responsabilité de la personne, de la communauté ou des deux ?"
     }
   ]
 }
