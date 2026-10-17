@@ -3,73 +3,73 @@
   "questions": [
     {
       "id": 1,
-      "question": "Présentez-vous. Parlez de votre ville, de vos activités quotidiennes et de ce que vous aimez faire pendant votre temps libre.",
+      "question": "Parlez de votre famille, de votre quartier et de votre routine du matin. Qu'est-ce que vous aimez le plus dans votre vie actuelle ?",
       "reading_seconds": 20,
       "speaking_seconds": 90
     },
     {
       "id": 2,
-      "question": "Racontez une journée particulièrement chargée. Comment avez-vous organisé votre temps et quelles difficultés avez-vous rencontrées ?",
+      "question": "Racontez un voyage ou une sortie qui ne s'est pas passé comme prévu. Qu'est-ce qui est arrivé et comment avez-vous réglé les problèmes ?",
       "reading_seconds": 25,
       "speaking_seconds": 120
     },
     {
       "id": 3,
-      "question": "Vous souhaitez vous inscrire à un cours de français. Quelles questions poseriez-vous à l'école au sujet des horaires, du prix, des niveaux et des méthodes d'enseignement ?",
+      "question": "Vous voulez louer une voiture pour le week-end. Quelles questions poseriez-vous à l'agence au sujet du prix, de l'assurance, de la durée de la location et des conditions ?",
       "reading_seconds": 30,
       "speaking_seconds": 120
     },
     {
       "id": 4,
-      "question": "Un ami vient d'arriver au Canada. Expliquez-lui comment trouver un logement, utiliser les transports et rencontrer de nouvelles personnes.",
+      "question": "Votre cousin va bientôt commencer un nouvel emploi au Canada. Expliquez-lui comment se préparer pour la première semaine, comment s'habiller et comment créer de bonnes relations avec ses collègues.",
       "reading_seconds": 30,
       "speaking_seconds": 150
     },
     {
       "id": 5,
-      "question": "Décrivez une compétence que vous avez apprise récemment. Pourquoi l'avez-vous choisie, comment l'avez-vous pratiquée et qu'avez-vous appris de cette expérience ?",
+      "question": "Décrivez un repas ou une fête dont vous gardez un bon souvenir. Qui était présent, qu'avez-vous mangé et pourquoi cet événement était-il important pour vous ?",
       "reading_seconds": 30,
       "speaking_seconds": 150
     },
     {
       "id": 6,
-      "question": "Vous devez convaincre un collègue de participer à un projet de bénévolat le week-end. Présentez le projet, ses avantages et répondez à deux objections possibles.",
+      "question": "Vous voulez convaincre votre voisin de participer au nettoyage du parc du quartier. Présentez l'activité, ses avantages et répondez à deux objections possibles.",
       "reading_seconds": 35,
       "speaking_seconds": 180
     },
     {
       "id": 7,
-      "question": "Préférez-vous vivre dans une grande ville ou dans une petite ville ? Comparez les possibilités d'emploi, le coût de la vie et la qualité de vie.",
+      "question": "Préférez-vous faire vos achats en ligne ou dans les magasins ? Comparez le prix, le choix des produits et la commodité.",
       "reading_seconds": 30,
       "speaking_seconds": 180
     },
     {
       "id": 8,
-      "question": "Selon vous, peut-on apprendre une langue étrangère efficacement sans vivre dans un pays où cette langue est parlée ? Donnez votre opinion et des exemples concrets.",
+      "question": "Selon vous, les enfants devraient-ils avoir un téléphone cellulaire avant l'âge de douze ans ? Donnez votre opinion et des exemples concrets.",
       "reading_seconds": 35,
       "speaking_seconds": 180
     },
     {
       "id": 9,
-      "question": "Votre entreprise propose de remplacer plusieurs réunions par des messages écrits. Êtes-vous favorable à ce changement ? Expliquez les avantages, les risques et votre solution.",
+      "question": "Votre école propose de remplacer certains examens écrits par des projets de groupe. Êtes-vous favorable à ce changement ? Expliquez les avantages, les risques et votre solution.",
       "reading_seconds": 35,
       "speaking_seconds": 180
     },
     {
       "id": 10,
-      "question": "Faut-il encourager les jeunes à voyager ou à travailler avant de commencer leurs études supérieures ? Défendez votre point de vue en considérant aussi l'opinion opposée.",
+      "question": "Faut-il limiter l'utilisation de la voiture dans les centres-villes ? Défendez votre point de vue en considérant aussi l'opinion opposée.",
       "reading_seconds": 40,
       "speaking_seconds": 210
     },
     {
       "id": 11,
-      "question": "Les outils d'intelligence artificielle rendent-ils les étudiants plus autonomes ou plus dépendants ? Présentez des arguments équilibrés et proposez des règles d'utilisation.",
+      "question": "Les réseaux sociaux rapprochent-ils les gens ou les isolent-ils ? Présentez des arguments équilibrés et proposez des conseils d'utilisation.",
       "reading_seconds": 40,
       "speaking_seconds": 210
     },
     {
       "id": 12,
-      "question": "Imaginez que vous devez changer de carrière dans cinq ans. Quels critères utiliseriez-vous pour choisir votre nouvelle profession ? Expliquez votre plan et les sacrifices possibles.",
+      "question": "Imaginez que vous recevez une somme d'argent importante. Quels critères utiliseriez-vous pour décider comment la dépenser ou l'investir ? Expliquez votre plan et les risques possibles.",
       "reading_seconds": 45,
       "speaking_seconds": 210
     }
