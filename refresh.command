@@ -7,10 +7,7 @@ echo "--------------------------------------------------"
 # 1. FORCE the script to start inside the folder where this script lives (REFRESH MODULES)
 cd "$(dirname "$0")"
 
-# 2. CLEAN UP any stuck Git states just in case
-git rebase --abort 2>/dev/null
-git merge --abort 2>/dev/null
-rm -rf .git/rebase-merge 2>/dev/null
+
 
 # 3. Pull latest changes from GitHub cleanly
 git pull origin main
